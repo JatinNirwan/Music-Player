@@ -1,0 +1,763 @@
+body{
+	background-color:#11112b;
+}
+span{
+	display: inline-block;
+}
+main{
+	width: 65%;
+	margin-left: 7%;
+	display: inline-block;
+	/*margin-left: 3%;*/
+	/*box-sizing: border-box;*/
+}
+aside{
+	width: 25%;
+	height: auto;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 1%;
+}
+
+
+
+@media screen and (max-width: 1200px){
+	aside{
+		width: 0px;
+		height: 0px;
+		overflow: hidden;
+	}
+	main{
+		width: 90%;
+	}
+}
+
+
+/*classes*/
+
+.white-color{
+	color: white;
+	font-family: system-ui;
+	text-decoration: none;
+}
+.grey-color{
+	color: grey;
+	font-family: system-ui;
+	text-decoration: none;
+}
+.heading{
+	font-weight: 700;
+	font-size: 25px;
+}
+.bold-text{
+	font-weight: 600;
+}
+.font-family{
+	font-family: system-ui;
+}
+.text-align-center{
+	text-align:center;
+}
+.circle-effect{
+	border-radius: 50%;
+}
+/*.inline-block{
+	display: inline-block;
+}
+*/
+
+/*navigation*/
+#navigation{
+	margin: 30px 30px 50px 30px;
+	/*border: 1px solid grey;*/
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+#ninja-studio-icon{
+	height: 60px;
+	width: 60px;
+	background-image: url("images/navigation/ninja.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+	margin: 0px 10px;
+}
+#ninja-studio-favourites{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	/*border: 1px solid white;*/
+	width: 300px;
+}
+#ninja-studio{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+#favourites{
+	margin-left: 60px;
+}
+
+
+
+#search-bell-icon-account{
+	/*border: 1px solid white;*/
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+
+#search-icon{
+	position: relative;
+	left: 30px;
+
+}
+#search input{
+	padding: 10px;
+	padding-left: 35px;
+	background-color: #222a54;
+	border-color: #222a54;
+	border-radius: 10px;
+	width: 200px;
+}
+#mic-icon{
+	position: relative;
+	right: 25px;
+}
+
+
+#bell-icon{
+	margin: auto 30px;
+}
+
+#account{
+	background-image: url("images/navigation/account.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+}
+
+
+
+#nav-queue-container{
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+	transition: all 0.2s;
+}
+
+
+
+
+@media screen and (max-width: 1200px){
+
+	#search-bell-icon-account{
+		height: 0px;
+		width: 0px;
+		overflow: hidden;
+	}
+
+	#nav-queue-container:target{
+		background-color: #222a54;
+		width: 250px;
+		height: auto;
+		position: fixed;
+		right: 0px;
+		padding: 30px;
+		z-index: 5;
+
+	}
+	#nav-queue{
+		/*border: 1px solid white;*/
+		display: flex;
+		align-items: center;
+	}
+
+}
+
+@media screen and (min-width: 1201px){
+	#nav-queue{
+		height: 0px;
+		width: 0px;
+		overflow: hidden;
+	}
+}
+
+
+/*recomended*/
+#recomended{
+	display: flex;
+	flex-flow: row nowrap;
+	margin-left: -8%;
+}
+#recomended a img{
+	flex-shrink: 1;
+	height: 23vh;
+	width: 23vw;
+	transition: all 0.3s;
+}
+#recomended a img:hover{
+	transform: scale(1.5, 1.3);
+	z-index: 1;
+	/*position: fixed;*/
+}
+
+
+@media screen and (max-width: 1200px){
+	#recomended a img{
+		/*height: 30vh;*/
+		width: 30vw;
+	}
+}
+
+
+/*latest-release*/
+#latest-release{
+	/*margin-left: 20px;*/
+	display: flex;
+	flex-flow: row wrap;
+
+}
+#lr-image{
+	background-image: url("images/latest release/pic1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100px;
+	width: 120px;
+	margin-right: 20px;
+}
+#lr-image:hover{
+	opacity: 0.7;
+}
+#lr-image-name-date{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+.lr-song{
+	width: 400px;
+	height: 100px;
+	/*border: 1px solid white;*/
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+
+#lr1, #lr2, #lr3, #lr4{
+	position: relative;
+}
+
+#dropdown-list1{
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 350px;
+	transition: all 0.5s;
+}
+
+#dropdown-list1:target{
+	height: 200px;
+	width: 200px;
+	background-color: white;
+	padding: 0px;
+	line-height: 30px;
+	z-index: 2;
+}
+
+#dropdown-list2{
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 350px;
+	transition: all 0.5s;
+}
+
+#dropdown-list2:target{
+	height: 200px;
+	width: 200px;
+	background-color: white;
+	padding: 0px;
+	line-height: 30px;
+	z-index: 2;
+}
+
+#dropdown-list3{
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 350px;
+	transition: all 0.5s;
+}
+
+#dropdown-list3:target{
+	height: 200px;
+	width: 200px;
+	background-color: white;
+	padding: 0px;
+	line-height: 30px;
+	z-index: 2;
+}
+
+#dropdown-list4{
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 350px;
+	transition: all 0.5s;
+}
+
+#dropdown-list4:target{
+	height: 200px;
+	width: 200px;
+	background-color: white;
+	padding: 0px;
+	line-height: 30px;
+	z-index: 2;
+}
+
+
+/*popular artist*/
+
+.artist{
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+}
+.artist:hover{
+	opacity: 0.7;
+}
+.artist-list{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+#ed-sheeran{
+	background-image: url("images/artist/ed-sheeran.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 20px;
+	text-align: center;
+}
+#cold-play{
+	background-image: url("images/artist/cold-play.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 20px;
+	text-align: center;
+
+}
+#zayn{
+	background-image: url("images/artist/zayn.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 20px;
+	text-align: center;
+}
+#charlie-puth{
+	background-image: url("images/artist/charlie-puth.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 20px;
+	text-align: center;
+}
+#imagine-dragons{
+	background-image: url("images/artist/imagine-dragons.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 20px;
+	text-align: center;
+}
+#bruno-mars{
+	background-image: url("images/artist/bruno-mars.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 20px;
+	text-align: center;
+}
+
+
+/*music type*/
+
+#music-type{
+	background-color: #222a54;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+
+.music-effect-dimension{
+	height: 90px;
+	width: 90px;
+	margin: 10px;
+}
+.music-effect-dimension:hover{
+	opacity: 0.7;
+}
+
+#stations{
+	height: 100px;
+	width: 120px;
+	margin: 10px;
+	margin-top: -10px;
+	background-image: url(images/music-type/stations.jpg);
+	background-size: cover;
+	background-position: center;
+	/*position: relative;*/
+	border-radius: 10%;
+}
+#stations p{
+	position: relative;
+	left: 5px;
+	top: 10px;
+	font-weight: 800;
+	letter-spacing: 3px;
+	font-size: 20px;
+}
+#stations:hover{
+	opacity: 0.7;
+}
+
+
+#love{
+	background-image: url("images/music-type/love.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+#love p{
+	position: absolute;
+	top: 15px;
+	left: 30px;
+}
+#retro{
+	background-image: url("images/music-type/retro.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+#retro p{
+	position: absolute;
+	top: 15px;
+	left: 30px;
+}
+#chill{
+	background-image: url("images/music-type/chill.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+#chill p{
+	position: absolute;
+	top: 15px;
+	left: 30px;
+}
+#workout{
+	background-image: url("images/music-type/workout.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+#workout p{
+	position: absolute;
+	top: 15px;
+	left: 10px;
+}
+#rock{
+	background-image: url("images/music-type/rock.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+#rock p{
+	position: absolute;
+	top: 15px;
+	left: 30px;
+}
+#pop{
+	background-image: url("images/music-type/pop.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+#pop p{
+	position: absolute;
+	top: 15px;
+	left: 30px;
+}
+#rap{
+	background-image: url("images/music-type/rap.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+#rap p{
+	position: absolute;
+	top: 15px;
+	left: 30px;
+}
+
+
+/*song-mood*/
+#song-mood{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+
+.song-mood-list{
+	height: 200px;
+	width: 300px;
+	overflow: hidden;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	margin: 10px;
+}
+.song-mood-list img{
+	height: 100%;
+	width: 100%;
+	transition: all 0.5s;
+	box-sizing: border-box;
+}
+.song-mood-list img:hover{
+	/*opacity: 0.7;*/
+	transform: scale(1.3);
+}
+.song-mood-list p{
+	position: absolute;
+	color: white;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+
+/*latest-songs-list*/
+.latest-songs-list{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+
+.latest-songs{
+	height: 130px;
+	width: 100px;
+	margin: 10px;
+}
+.latest-songs img{
+	height: 100%;
+	width: 100%;
+}
+#song1{
+	background-image: url("images/songs-wallpaper/pic1.jpg");
+}
+#song2{
+	background-image: url("images/songs-wallpaper/pic2.jpg");
+}
+#song3{
+	background-image: url("images/songs-wallpaper/pic3.jpg");
+}
+#song4{
+	background-image: url("images/songs-wallpaper/pic4.jpg");
+}
+.latest-songs-image{
+	height: 100px;
+	width: 100px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 10px;
+}
+.latest-songs-image:hover{
+	opacity: 0.7;
+}
+
+#queue-dropdown-list{
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+	position: fixed;
+	transition: all 0.5s;
+}
+
+#queue-dropdown-list:target{
+	height: 150px;
+	width: 150px;
+	background-color: white;
+	padding: 0px;
+	line-height: 30px;
+	z-index: 2;
+}
+#queue-dropdown-list ul li{
+	position: relative;
+	right: 30px;
+}
+
+
+
+/*aside*/
+.heading-dropdown{
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	height: auto;
+	/*border: 1px solid white;*/
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+#queue-heading{
+	/*align-self: flex-start;*/
+}
+#quene-dropdown{
+	/*align-self: flex-end;*/
+	/*justify-items: flex-end;*/
+}
+
+
+
+/*queue list*/
+.queue-list{
+	border-radius: 1px solid white;
+}
+.queue-element{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	margin: 30px 0px;
+}
+
+
+.queue-element-background-img{
+	height: 50px;
+	width: 50px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 10%;
+}
+
+.queue-element-background-img:hover{
+	opacity: 0.7;
+}
+
+#queue-element-background-img1{
+	background-image: url("images/songs-wallpaper/pic1.jpg");	
+}
+#queue-element-background-img2{
+	background-image: url("images/songs-wallpaper/pic2.jpg");
+}
+#queue-element-background-img3{
+	background-image: url("images/songs-wallpaper/pic3.jpg");	
+}
+#queue-element-background-img4{
+	background-image: url("images/songs-wallpaper/pic4.jpg");	
+}
+
+/*.queue-element-background-img{
+	margin: 10px;
+}
+*/
+
+
+.queue-element-details a{
+	display: flex;
+	flex-flow: row nowrap;
+}
+.queue-element-details > a > span{
+	margin-left: 10px;
+	align-self: center;
+}
+.queue-element-like-option:hover{
+	color: red;
+}
+
+
+
+@media screen and (min-width: 1201px){
+	.heading-dropdown > div{
+		height: 0px;
+		width: 0px;
+		overflow: hidden;
+	}
+}
+
+
+
+/*@media screen and (max-width: 900px){
+	.heading-dropdown{
+		background-color: #222a54;
+	}
+	#queue-heading{
+		height: 0px;
+		width: 0px;
+		overflow: hidden;
+	}
+	.heading-dropdown > div{
+		height: 10px;
+		width: 10px;
+		color: white;
+	}
+
+}
+*/
+
+
+
+
+/*music*/
+.music{
+	position: fixed;
+	top: 90vh;
+	left: 0vh;
+	/*background-color:#141440;*/
+	background-color: whitesmoke;
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+	transition: all 0.2s;
+}
+
+.music:target{
+	height: 10vh;
+	width: 100vw;
+	/*background-color:#141440;*/
+	background-color: whitesmoke;
+	top: 90vh;
+}
+.audio{
+	width: 100vw;
+}
